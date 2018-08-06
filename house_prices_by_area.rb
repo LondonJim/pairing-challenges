@@ -10,6 +10,10 @@ house_price = {["Basingstoke and Deane", "Tadley South"]=>
     [[94000,
       "RG26 3UR",
       Date.parse("1995-09-01")]]},
+
+
+
+
 ["Camden", "Cantelowes"]=>
   {:count=>1,
    :average=>215000,
@@ -58,6 +62,7 @@ house_price = {["Basingstoke and Deane", "Tadley South"]=>
    :average=>51500,
    :transactions=>
     [[51500, "TA4 3NJ", Date.parse("1995-02-24")]]},
+
  ["Test Valley", "St Mary's"]=>
   {:count=>1,
    :average=>60000,
@@ -66,4 +71,4 @@ house_price = {["Basingstoke and Deane", "Tadley South"]=>
       "SP10 1JG",
       Date.parse("1995-06-23")]]}}
 
-house_price.each { |k, v| puts "A house was sold in #{k[0]}, #{k[1]} for #{v[:average]} on #{v[:transactions][0][2]}"}
+house_price.each { |k, v| puts "A house was sold in #{k[0]}, #{k[1]} for #{v[:transactions][0][0]} on #{v[:transactions][0][2].strftime("%d/%m/%Y")}"}
