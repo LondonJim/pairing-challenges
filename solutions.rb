@@ -36,6 +36,7 @@ p hash_two
 sorted_hash = []
 hash_two.each_with_index { |k, i| sorted_hash << [k[0], hash_two.values.sort[i]]}
 sorted_hash = sorted_hash.to_h
+p sorted_hash
 
 
 #**********************************************
