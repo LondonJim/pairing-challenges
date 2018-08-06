@@ -15,7 +15,7 @@ p array_one.sum
 
 # Question 5 (using array_one)
 p array_one.sum * 2
-
+##
 # Set 2
 # Question 1
 hash_one = { a: 1, b: 2}
