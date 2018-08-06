@@ -21,13 +21,25 @@ p array_one.sum * 2
 hash_one = { a: 1, b: 2}
 p hash_one.transform_values { |v| v += 1 }
 
+
+#*********************************************
 # Question 2
 hash_two = {a: 2, b: 5, c: 1}
+nums = hash_two.values.sort
+i = 0
+hash_two.each_key do |k|
+  hash_two[k] = nums[i]
+  i += 1
+end
+p hash_two
+
+#**********************************************
 
 # Question 3 (using hash_two)
 p hash_two.map { |k, v| v }.sort
 
 # Question 4
 hash_three = { a: 1, b: 2, c: 3 }
-
 p hash_three.map { |k, v| [k.to_s, v.to_s] }.to_h.invert
+# Alternative
+p hash_three.transform_keys(&:to_s).transform_values(&:to_s).invert
